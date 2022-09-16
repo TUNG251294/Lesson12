@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Cars = ["BMW", "Meccedes", "Honda", "Wave", "Sirius"]
+    for (let i in Cars) {
+        document.write(Cars[i] + "<br>")
+    }
+
+    for (let i = 0; i < Cars.length; i++) {
+        document.write("+ " + Cars[i] + "<br>");
+    }
+
+    for (let j = Cars.length; j > 0; j--) {
+        document.write("- " + Cars[j - 1] + "<br>")
+    }
+    //  alert(Cars.length)
+    Cars.push("Ford")
+    for (let j in Cars) {
+        document.write("push " + Cars[j] + "<br>")
+    }
+
+    //name.join()
+    //name.reverse()
+    //name.sort()
+    document.write("chuỗi: " + Cars.join() + "<br>")
+    document.write("chuỗi nghịch: " + Cars.reverse().join(" ") + "<br>");
+    document.write("chuỗi thứ tự: " + Cars.sort().join(", ") + "<br>")
+    //name.concat()
+    document.write("nối mảng " + Cars.concat(1, 2) + "<br>");
+    document.write("nối mảng " + Cars.concat([1, 2], [3, 4]) + "<br>");
+    //name.pop() xóa phần tử cuối
+    Cars.pop()
+    document.write(Cars + "<br>");
+    //----------------------------------------------------------------------------------
+    //name.unshift() để nối vào đầu mảng/ phải gán biến mới
+    let Num = [3, 4, 5]
+    Num.unshift(0, 1, 2)
+    document.write(Num + "<br>")
+    //name.shift() lấy phần tử đầu của mảng/ phải gán biến mới
+    Num.shift()
+    for (let i in Num) {
+        document.write(Num[i] + "<br>")
+    }
+    //name.toString() phải gán biến mới
+    Num2 = Num.toString()
+    for (let i in Num2) {
+        console.log(Num2[i])
+        console.log(typeof Num2[i])
+    }
+</script>
+</body>
+</html>

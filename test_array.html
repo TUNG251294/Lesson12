@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myname = ["My", "name", "is", "Huynh", "Thanh", "Tung"];
+    for (let i in myname) {
+        document.write(i + "<br>");
+        document.write(myname[i] + "<br>");
+    }
+    document.write("Phần tử thứ 4 trong mảng là " + myname[3] + "<br>");
+
+    let line = new Array(10); // An array of length 10 with no elements
+    document.write(line.join("-") + "<br>"); // a string of 9 hyphens
+
+    //Hàm so sánh
+
+    let points = [40, 100, 1, 5, 25, 10]
+    points.sort(function(a, b) {
+        return a - b
+    })
+    document.write(points + "<br>");
+
+    points.sort(function(a, b) {
+        return b - a
+    })
+    document.write(points);
+
+    //-------------------------------MATRIX--------------------------------
+
+    var matrix = new Array(10).fill(new Array(10));
+    for (var row = 0; row < matrix.length; row++) {
+        for (var column = 0; column < matrix[row].length; column++) {
+            matrix[row][column] = Math.floor((Math.random() * 100) + 1);
+        }
+    }
+    for (var row = 0; row < matrix.length; row++) {
+        for (var column = 0; column < matrix[row].length; column++) {
+            document.write(matrix[row][column] + " ");
+        }
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>
